@@ -17,11 +17,11 @@ function Header() {
   </div>
     <div className="rightHeader">
 <ul>
-  <li><SearchIcon /></li>
+  <li><SearchIcon fontSize="medium" /></li>
   <li>CHILDREN</li>
   <li>{giftIcon}</li>
-  <li><NotificationsIcon /></li>
-  <li><InsertEmoticonIcon /></li>
+  <li><NotificationsIcon fontSize="medium" /></li>
+  <li><InsertEmoticonIcon fontSize="medium" color="secondary" /></li>
 </ul>
 
     </div>
