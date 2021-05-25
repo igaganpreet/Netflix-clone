@@ -12,7 +12,12 @@ function Section1() {
     <source src={Movie} type="video/mp4" />
 </video>
 
-<div id="test"></div>
+<div id="test">
+  <div className="movieTitle">movieTitle</div>
+<p className="movieDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id ultricies leo. Quisque a egestas elit.</p>
+<Button id="test1" variant="outlined" color="default" style={{backgroundColor:"white", color:"black"}}>Button1</Button>
+<Button className="test" variant="outlined" color="default" >Button2</Button>
+</div>
 
 
 {/* <div className="movieTitle">movieTitle</div>
