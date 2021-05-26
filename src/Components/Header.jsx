@@ -2,6 +2,10 @@ import React from "react";
 import SearchIcon from '@material-ui/icons/Search';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+
+
+
 function Header() {
     const headerItems=["Home","TV Shows","Movies","New & Popular","My List"]
     const giftIcon=<img src="https://img.icons8.com/material-outlined/90/ffffff/gift--v1.png" alt="gift"/>
@@ -22,6 +26,7 @@ function Header() {
   <li>{giftIcon}</li>
   <li><NotificationsIcon fontSize="medium" /></li>
   <li><InsertEmoticonIcon fontSize="medium" color="secondary" /></li>
+  <li><ArrowDropDownIcon /></li>
 </ul>
 
     </div>

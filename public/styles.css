@@ -39,6 +39,14 @@ position: relative;
   flex-direction: row;
   padding:0.2% 5%;
 }
+#description{
+  padding-left:5%;
+  z-index: 5;
+  position: absolute;
+  margin-top:-38%;
+  height:300px;
+  width:40%;
+}
 .leftHeader{
   flex-basis: 75%;
 }
@@ -70,21 +78,25 @@ li{
 .rightHeader ul li {
 margin:0 8%; 
 }
-/* 
-.movieTitle, .movieDescription{
-  z-index: 5;
-  position: absolute;
+
+.MuiButton-label{
+  font-weight: 700;
+  font-size: 1.2em;
+  /* padding:1% 2%; */
 }
-.test{
-  z-index: 5;
-  position: absolute;
-  margin:50%;
-} */
-#test{
-  z-index: 5;
-  position: absolute;
-  margin-top:-30%;
-  height:300px;
-  width:300px;
-  /* background-color: yellow  ; */
+
+.MuiButton-root{
+  padding:0% 10%;
+}
+.movieTitle img{
+  height:50%;
+  width:50%;
+}
+.movieDescription{
+  font-weight: 500;
+  color:white;
+  font-size: 1.2em;
+  line-height: 1.5em;
+letter-spacing: 0.05em;  
+margin:3% 0;
 }
