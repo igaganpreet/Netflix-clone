@@ -39,13 +39,32 @@ position: relative;
   flex-direction: row;
   padding:0.2% 5%;
 }
-#description{
+#descriptionLeft{
   padding-left:5%;
   z-index: 5;
   position: absolute;
   margin-top:-38%;
-  height:300px;
   width:40%;
+}
+#descriptionRight{
+  display: flex;
+  flex-direction: row;
+  z-index: 5;
+  position: absolute;
+  margin-top:-22%;
+  margin-left:89%;
+  align-items: center ;
+  /* height:100px; */
+  width:40%;
+  /* background-color: yellow; */
+}
+.ageRating{
+  /* opacity:0.6; */
+  background-color:#39393999;
+  color:white;
+  padding:1.5% 15% 1.5% 2%;
+  font-weight: 400;
+  border-left: 0.2em solid white;
 }
 .leftHeader{
   flex-basis: 75%;
@@ -85,9 +104,6 @@ margin:0 8%;
   /* padding:1% 2%; */
 }
 
-.MuiButton-root{
-  padding:0% 10%;
-}
 .movieTitle img{
   height:50%;
   width:50%;
@@ -99,4 +115,15 @@ margin:0 8%;
   line-height: 1.5em;
 letter-spacing: 0.05em;  
 margin:3% 0;
+}
+.volImg{
+  height:2em;
+  width: 2em;
+}
+.avatarImg{
+  border-radius: 0.2em;
+  border:none;
+}
+.dropdown-basic{
+  border:10px solid pink
 }
