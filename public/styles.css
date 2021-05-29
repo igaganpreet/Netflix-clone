@@ -28,7 +28,6 @@ background-color: rgb(255, 71, 230);
 }
 video{
 position: relative;
-  /* height:100vh; */
   width:100vw;
 }
 .header{
@@ -54,14 +53,10 @@ position: relative;
   margin-top:-22%;
   margin-left:89%;
   align-items: center ;
-  /* height:100px; */
   width:40%;
-  /* background-color: yellow; */
 }
 .ageRating{
-  /* opacity:0.6; */
   background-color:#39393999;
-  color:white;
   padding:1.5% 15% 1.5% 2%;
   font-weight: 400;
   border-left: 0.2em solid white;
@@ -95,13 +90,12 @@ li{
   width:2em;  
 }
 .rightHeader ul li {
-margin:0 8%; 
+margin:0 5%; 
 }
 
 .MuiButton-label{
   font-weight: 700;
   font-size: 1.2em;
-  /* padding:1% 2%; */
 }
 
 .movieTitle img{
@@ -123,7 +117,40 @@ margin:3% 0;
 .avatarImg{
   border-radius: 0.2em;
   border:none;
-}
+ }
 .dropdown-basic{
   border:10px solid pink
+}
+.hoverDiv{
+  z-index:10;
+  background-color: lawngreen;
+  position: absolute;
+  width:10%;
+  margin-left: -7%;
+ 
+}
+.hoverDiv ul{
+  display: flex;
+  flex-direction: column;
+}
+.hoverDiv ul li{
+  align-self: flex-start;
+    flex-basis: 5em;
+
+}
+#dropdownArrow{
+  animation-duration: 0.2s;
+  animation-fill-mode:forwards;
+  animation-timing-function: linear;
+  color:white;
+}
+@keyframes rotateArrow {
+  0%   {transform: rotate(0deg);}
+  50%  {transform: rotate(90deg);}
+  100%  {transform: rotate(180deg);}
+}
+@keyframes reverseRotateArrow {
+  0%   {transform: rotate(180deg);}
+  50%  {transform: rotate(90deg);}
+  100%  {transform: rotate(0deg);}
 }

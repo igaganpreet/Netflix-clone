@@ -4,7 +4,7 @@ import Movie from "./video/movie.mp4";
 import Button from '@material-ui/core/Button';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import InfoIcon from '@material-ui/icons/Info';
-import VolumeUpOutlinedIcon from '@material-ui/icons/VolumeUpOutlined';
+
 function Section1() {
   return <div className="section1" >
   <Header />
@@ -22,7 +22,7 @@ function Section1() {
 
 
 <div id="descriptionRight">
-<Button id="volumeButton"><img class="volImg" src={process.env.PUBLIC_URL + '/images/volumeUp.png'} alt="Movie Title" /></Button>
+  <Button id="volumeButton"><img class="volImg" src={process.env.PUBLIC_URL + '/images/volumeUp.png'} alt="Movie Title" /></Button>
 
   <div className="ageRating">6+</div>
 
