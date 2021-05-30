@@ -4,20 +4,13 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Button from '@material-ui/core/Button';
 import HoverMenu from "./HoverMenu";
-
+// import Dropdown from 'react-bootstrap/Dropdown'
 
 function Header() {
 
    const [divStyle, setDivStyle] = useState({display: 'none'});
 
   const [arrowStyle, setArrowStyle] = useState({animationName:''});
-
-function handleMouseOver(){
-  
-}
-
-
-
 
     const headerItems=["Home","TV Shows","Movies","New & Popular","My List"]
     const giftIcon=<img src="https://img.icons8.com/material-outlined/90/ffffff/gift--v1.png" alt="gift"/>
@@ -48,11 +41,12 @@ function handleMouseOver(){
                  }}
                  onMouseLeave={e => {
                      setDivStyle({display: 'none'})
-                     
                      setArrowStyle({animationName:'reverseRotateArrow'});
                  }}>{avatar}<ArrowDropDownIcon id="dropdownArrow" style={arrowStyle} /></Button>
 
 <HoverMenu avatar={avatar} style={divStyle} />
+
+
 </li>
 </ul>
 
