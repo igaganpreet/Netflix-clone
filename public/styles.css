@@ -37,6 +37,8 @@ position: relative;
   display:flex;
   flex-direction: row;
   padding:0.2% 5%;
+  color:#d3d3d4;
+  font-weight: 400;
 }
 #descriptionLeft{
   padding-left:5%;
@@ -76,7 +78,7 @@ ul{
 }
 li{
  font-weight: 400;
- font-size:0.8em;
+ font-size:0.85em;
  flex-basis: 7em;
  align-self: center;
 }
@@ -154,6 +156,13 @@ margin:3% 0;
   50%  {transform: rotate(90deg);}
   100%  {transform: rotate(0deg);}
 }
+
+
+
+
+
+
+/* SUPSCROLL */
 .supscroll-wrapper a img{
   padding:0;
   margin:0;
@@ -161,11 +170,11 @@ margin:3% 0;
   width:15em;
 }
 #supscroll {
-  width:96%;
-  margin-left: 2%;
+  width:95%;
+  margin-left: 5%;
 }
 #supscroll .supscroll-wrapper {
-  width: 98%;
+  width: 100%;
 }
 
 .grid-container {
@@ -188,11 +197,104 @@ font-weight: 400;
 .grid-item a:hover{
   text-decoration: underline
   }
-.socialIcons, .footerDetails{
+/* .socialIcons, .footerDetails{
 display: flex;
 margin-left:15%;
 }
 
 .socialIcons a{
   margin-right:2%;
+} */
+
+
+.supscroll {
+  position: relative;
+  width:100%;
+}
+.supscroll .supscroll-wrapper {
+  overflow-x: scroll;
+  white-space: nowrap;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.supscroll .supscroll-wrapper::-webkit-scrollbar { 
+  display: none; 
+}
+
+.supscroll .supscroll-wrapper {
+  padding: 5px 0;
+}
+
+.supscroll .supscroll-wrapper a {
+  display: inline-block;
+  /* notice the comments between inline-block items */
+  margin-right: 10px;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.control-right,
+.control-left {
+  height: 10em;
+  width:5em;
+  /* color:#757575; */
+  /* margin-bottom: auto;
+  margin-top:auto; */
+  /* box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20); */
+  background: #8a0a0a99;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index:2;
+  /* opacity: 0.94; */
+
+}
+.control-right {
+left:95%;
+}
+.control-left {
+  left:5%;
+}
+
+.control-right.show :hover,
+.control-left.show :hover{
+  opacity: 0.98;
+}
+.control-right svg,
+.control-left svg{
+  position: absolute;
+  left: 0;right: 0;bottom: 0;top: 0;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  fill: #757575;
+}
+.control-right.show:hover svg,
+.control-left.show:hover svg{
+  fill: #000;
+}
+@media (pointer: coarse) {
+  .control-right,
+  .control-left {
+  display: none !important;
+  }
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
+}
+
+
+.show {
+transition: opacity 400ms;
+}
+.hide {
+opacity: 0;
 }
