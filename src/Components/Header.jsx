@@ -8,8 +8,7 @@ import HoverMenu from "./HoverMenu";
 
 function Header() {
 
-   const [divStyle, setDivStyle] = useState({display: 'none'});
-
+  const [divStyle, setDivStyle] = useState({display: 'none'});
   const [arrowStyle, setArrowStyle] = useState({animationName:''});
 
     const headerItems=["Home","TV Shows","Movies","New & Popular","My List"]

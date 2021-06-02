@@ -37,10 +37,10 @@ function supscroll(node, options) {
                 }
                 leftElem = document.createElement('span');
                 leftElem.classList.add('control-left') 
-                leftElem.innerHTML = '<img src="https://img.icons8.com/material/24/000000/chevron-left--v1.png"/>';
+                leftElem.innerHTML = '<img src="https://img.icons8.com/material/40/ffffff/chevron-left--v1.png"/>';
                 rightElem = document.createElement('span');
                 rightElem.classList.add('control-right') 
-                rightElem.innerHTML = '<img src="https://img.icons8.com/material/24/000000/chevron-right--v1.png"/>';
+                rightElem.innerHTML = '<img src="https://img.icons8.com/material/40/ffffff/chevron-right--v1.png"/>';
                 element.parentNode.appendChild(leftElem);
                 element.parentNode.appendChild(rightElem);
                 maxScrollLeft = element.scrollWidth - element.clientWidth;
