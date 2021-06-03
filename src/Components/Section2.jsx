@@ -9,21 +9,27 @@ function Section2() {
         supscroll(elem);
     });
 
-    const [genreStyle, setGenreStyle] = useState({display: 'none'});
-
-  return <div className="section2">
-  <div className="genre">
-    <h3 onMouseEnter={e => {
-      console.log("mouse over");
-                     setGenreStyle({display: 'block'});
-                 }}
-                 onMouseLeave={e => {
-                     setGenreStyle({display: 'none'})
-                 }}><a href="#" >Comedies</a></h3>
-    <h5 ><a href="#" style={{genreStyle}}>Explore All</a></h5>
-    <ChevronRightIcon />
+    const [arrowSize, setArrowSize] = useState({fontSize:"1.7em", marginTop:"0%"});
+    const [genreClass, setGenreClass] = useState("");
     
+return <div className="section2">
+<div className="genre">
+  <h3 onMouseEnter={e => {
+       console.log("mouse over");
+                      setArrowSize({fontSize:"1em",marginTop:"auto"});
+                      setGenreClass("genreAnimationforward");
+                  }}
+                  onMouseLeave={e => {
+                      setArrowSize({fontSize:"1.7em",marginTop:"0%"});
+                      setGenreClass("genreAnimationbackward");
+                    //   setGenreClass("hide");
+                  }}><a href="#" >Comedies</a></h3>
+  <h5 className={genreClass}><a href="#" >Explore All</a></h5>
+  <ChevronRightIcon className="genreRightIcon" style={arrowSize}/>
 </div>
+
+
+
     <div class="supscroll" id="supscroll">
       <div class="supscroll-wrapper" id="supscroll-wrapper">
           <a href="#"><img src="https://moviestudio.files.wordpress.com/2008/09/kungfupanda-poster-2.jpg" alt="kungfu panda"></img></a>
