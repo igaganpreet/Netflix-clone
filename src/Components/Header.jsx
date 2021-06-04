@@ -6,33 +6,44 @@ import Button from '@material-ui/core/Button';
 import HoverMenu from "./HoverMenu";
 // import Dropdown from 'react-bootstrap/Dropdown'
 
+
+
 function Header() {
 
   const [divStyle, setDivStyle] = useState({display: 'none'});
   const [arrowStyle, setArrowStyle] = useState({animationName:''});
 
-    const headerItems=["Home","TV Shows","Movies","New & Popular","My List"]
-    const giftIcon=<img src="https://img.icons8.com/material-outlined/90/ffffff/gift--v1.png" alt="gift"/>
-    const avatar=<img className="avatarImg" src={process.env.PUBLIC_URL + '/images/avatar.png'} alt="logo" />
+  const headerItems=["Home","TV Shows","Movies","New & Popular","My List"]
+  const giftIcon=<img src="https://img.icons8.com/material-outlined/90/ffffff/gift--v1.png" alt="gift"/>
+  const avatar=<img className="avatarImg" src={process.env.PUBLIC_URL + '/images/avatar.png'} alt="logo" />
 
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () =>{
+     if(window.scrollY >= 51){
+       setColorchange(true);
+     }
+     else{
+       setColorchange(false);
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
 
-
-  return <div className="header">
-    <div className="leftHeader">
+  return <div className={colorChange ? 'navbar colorChange' : 'navbar'}>
+    <div className="leftnav">
   <ul>
  <li> <img src={process.env.PUBLIC_URL + '/images/NetflixLogo.png'} alt="logo" /></li>
         {headerItems.map((item)=>{
-            return <li>{item}</li>
+            return <li><a href="#">{item}</a></li>
         })
         }
     </ul>
   </div>
-    <div className="rightHeader">
+    <div className="rightnav">
 <ul>
-  <li><SearchIcon fontSize="medium" /></li>
-  <li>CHILDREN</li>
-  <li>{giftIcon}</li>
-  <li><NotificationsIcon fontSize="medium" /></li>
+  <li><a href="#"><SearchIcon fontSize="medium" fontWeight="400" /></a></li>
+  <li><a href="#section2">CHILDREN</a></li>
+  <li><a href="#">{giftIcon}</a></li>
+  <li><a href="#"><NotificationsIcon fontSize="medium" /></a></li>
 <li>
 <Button onMouseOver={e => {
                      setDivStyle({display: 'block'});
@@ -51,5 +62,9 @@ function Header() {
 
     </div>
   </div>;
+
+
+
+
 }
 export default Header;

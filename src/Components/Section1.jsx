@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Movie from "./video/movie.mp4";
 import Button from '@material-ui/core/Button';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
@@ -7,11 +7,11 @@ import InfoIcon from '@material-ui/icons/Info';
 function Section1() {
   
 const infoIcon=<img src="https://img.icons8.com/android/24/ffffff/info.png" style={{marginRight:0.5+"em"}}/>;
-
+// const [mute, updateMute]=useState("unmuted");
   return <div className="section1" >
 
   <div className="videoBox" >
-      <video autoPlay loop muted>
+      <video autoPlay loop unmuted>
         <source src={Movie} type="video/mp4" />
       </video>
 

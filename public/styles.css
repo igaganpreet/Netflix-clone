@@ -17,28 +17,38 @@ body {
 .section1, .section2{
   height:100vh;
   width:100%;
+ 
 }
 .videoBox{
   position:absolute;  
   top:0;
   left:0;
+  margin-top: 0;;
   width:100%;
   height:100vh;
   overflow:hidden;
+  margin-top:-1.1%;
 }
 video{
 position: relative;
   width:100vw;
 }
-.header{
-  position: absolute;
+.navbar{
+  position: sticky;
+  top:0;
   z-index:100;
-  background-color: black;
+  background-color: transparent;
   display:flex;
   flex-direction: row;
   padding:0.2% 5%;
   color:#d3d3d4;
   font-weight: 400;
+  /* border: 1px solid; */
+  padding-top: 10px;
+  
+}
+.navbar.colorChange{
+  background-color: #000;
 }
 #descriptionLeft{
   padding-left:5%;
@@ -63,10 +73,10 @@ position: relative;
   font-weight: 400;
   border-left: 0.2em solid white;
 }
-.leftHeader{
+.leftnav{
   flex-basis: 75%;
 }
-.rightHeader{
+.rightnav{
   display: contents;
 }
 ul{
@@ -82,16 +92,25 @@ li{
  flex-basis: 7em;
  align-self: center;
 }
-.header ul li img{
+.navbar ul li img{
   height:100%;
   width:100%;
   flex-basis: 0px;
 }
-.rightHeader ul li img{
+.navbar ul li a{
+  text-decoration: none;
+  color:#f3f3f3;
+}
+/* .navbar ul li a:{
+  text-decoration: none;
+  color:red;
+  font-weight: 500;
+} */
+.rightnav ul li img{
   height:2em;
   width:2em;  
 }
-.rightHeader ul li {
+.rightnav ul li {
 margin:0 5%; 
 }
 
@@ -192,27 +211,29 @@ margin-left: 0.5%;
   animation-name: reverseMoveRightArrow;
   transition-timing-function: ease-in;
 } 
+
+
 @keyframes rotateArrow {
-  0%   {transform: rotate(0deg); opacity: 0;}
-  50%  {transform: rotate(90deg);opacity: 0.5;}
-  100%  {transform: rotate(180deg);opacity:1;}
+  0%   {transform: rotate(0deg); }
+  50%  {transform: rotate(90deg);}
+  100%  {transform: rotate(180deg);}
 }
 @keyframes reverseRotateArrow {
-  0%   {transform: rotate(180deg);opacity: 1;}
-  50%  {transform: rotate(90deg);opacity: 0.5;}
-  100%  {transform: rotate(0deg);opacity: 0;}
+  0%   {transform: rotate(180deg);}
+  50%  {transform: rotate(90deg);}
+  100%  {transform: rotate(0deg);}
 }
 
 @keyframes moveRightArrow {
-  0%   {margin-left:-2%;}
-  50%  {margin-left:0%}
-  100%  {margin-left:1%}
+  0%   {margin-left:-2%;opacity: 0;}
+  50%  {margin-left:0%;opacity: 0.5;}
+  100%  {margin-left:1%;opacity:1;}
 }
 
 @keyframes reverseMoveRightArrow {
-  0%   {margin-left:1%;}
-  50%  {margin-left:0%}
-  100%  {margin-left:-6%}
+  0%   {margin-left:1%;opacity: 1;}
+  50%  {margin-left:0%;opacity: 0.5;}
+  100%  {margin-left:-6%;opacity: 0;}
 }
 
 

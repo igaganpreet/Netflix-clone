@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import supscroll from "../test";
+import supscroll from "../supscroll";
 
 
 function Section2() {
@@ -12,9 +12,8 @@ function Section2() {
     const [arrowSize, setArrowSize] = useState({fontSize:"1.7em", marginTop:"0%"});
     const [genreClass, setGenreClass] = useState("");
     
-return <div className="section2">
-<div className="genre">
-  <h3 onMouseEnter={e => {
+return <div className="section2" id="section2">
+<div className="genre" onMouseEnter={e => {
        console.log("mouse over");
                       setArrowSize({fontSize:"1em",marginTop:"auto"});
                       setGenreClass("genreAnimationforward");
@@ -22,8 +21,8 @@ return <div className="section2">
                   onMouseLeave={e => {
                       setArrowSize({fontSize:"1.7em",marginTop:"0%"});
                       setGenreClass("genreAnimationbackward");
-                    //   setGenreClass("hide");
-                  }}><a href="#" >Comedies</a></h3>
+                  }}>
+  <h3 ><a href="#" >Comedies</a></h3>
   <h5 className={genreClass}><a href="#" >Explore All</a></h5>
   <ChevronRightIcon className="genreRightIcon" style={arrowSize}/>
 </div>
