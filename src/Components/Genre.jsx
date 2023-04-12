@@ -30,7 +30,7 @@ return <div className="Genre" id="Genre">
     <div className="supscroll" id="supscroll">
         <div className="supscroll-wrapper" id="supscroll-wrapper">
             {props.list.map((item)=>{
-                return <a href="#"><img src={item.movieImg} alt={item.movieName}></img></a>
+                return <a href="#"><img className="genreMovieImg" src={item.movieImg} alt={item.movieName}></img></a>
             })}    
         </div>
         </div>
